@@ -11,6 +11,17 @@ from planar_utils import plot_decision_boundary, sigmoid, load_planar_dataset, l
 
 def visualize_data():
     plt.scatter(X[0, :], X[1, :], c=Y, s=40, cmap=plt.cm.Spectral)
+    plt.show()
+
+def print_data_shape():
+    shape_X = X.shape
+    shape_Y = Y.shape
+    m = X[1].size
+    print ('The shape of X is: ' + str(shape_X))
+    print ('The shape of Y is: ' + str(shape_Y))
+    print ('I have m = %d training examples!' % (m))
 
 
 X, Y = load_planar_dataset()
+visualize_data()
+print_data_shape()
